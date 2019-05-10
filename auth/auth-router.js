@@ -46,7 +46,6 @@ router.post('/register', (req, res) => {
     const payload = {
       subject: user.id,
       username: user.username,
-      roles: ['student'],
     };
     const options = {
       expiresIn: '1h',
