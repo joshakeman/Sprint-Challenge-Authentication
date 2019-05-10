@@ -29,9 +29,20 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+
+The HTTP protocol is designed to be stateless, and so we need a way to store some state that lets the backend remember tthe client has already logged in and has authorization. Without some way to store state about authentication status, users would have to log in every time they went to a new page with any restrictions--ie pages that can only be accessed by registered users.
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+
+It's never acceptable to store passwords as plain text. By encrypting user passwords, we make it more difficult for hackers that break into the server to use the passwords stored there.
+
 1. What does bcrypt do to slow down attackers?
+
+One thing bcrypt does is introduce random data called 'salt' when hashing a user's password. The longer and more random a password is, the longer it would take for an attacker to potentially figure out how the hash was generated using something like a rainbow table.
+
 1. What are the three parts of the JSON Web Token?
+
+The header, the payload and the signature.
 
 ## Project Set Up
 
